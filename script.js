@@ -313,3 +313,28 @@ window.addEventListener('load', () => {
     initializeSocialProof();
     initializeScrollOverride();
 });
+
+
+
+// Minimalist Hero Animation Logic
+window.addEventListener('load', () => {
+    const minHero = document.getElementById('minimalist-hero');
+    const minCircle = document.getElementById('min-hero-circle');
+    const minImage = document.getElementById('min-hero-image');
+    const minLeft = document.getElementById('min-hero-left');
+    const minRight = document.getElementById('min-hero-right');
+
+    if (minHero) {
+        setTimeout(() => {
+            // সেকশনটি দৃশ্যমান হবে
+            minHero.classList.remove('opacity-0');
+            // সার্কেলটি বড় হবে
+            minCircle.classList.remove('scale-0');
+            minCircle.classList.add('scale-100');
+            // ইমেজ এবং টেক্সটগুলো নিচ থেকে উপরে উঠে আসবে
+            minImage.classList.remove('opacity-0', 'translate-y-20');
+            minLeft.classList.remove('opacity-0', 'translate-y-10');
+            minRight.classList.remove('opacity-0', 'translate-y-10');
+        }, 300); // পেজ লোড হওয়ার ৩০০ মিলি-সেকেন্ড পর এনিমেশন শুরু হবে
+    }
+});
