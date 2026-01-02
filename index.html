@@ -89,7 +89,7 @@ src="https://www.facebook.com/tr?id=1189889029318778&ev=PageView&noscript=1"
 
             <div class="hidden md:flex">
                 <div class="wave-wrapper inline-block relative header-cta-pulse">
-                    <a href="#enroll" 
+                    <a href="#enroll" id="registerBtn"
                         class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-sm font-bold text-white shadow-xl shadow-violet-400/50 transition transform hover:scale-[1.03] duration-300 relative z-10">
                          রেজিস্টার করুন
                     </a>
@@ -115,7 +115,7 @@ src="https://www.facebook.com/tr?id=1189889029318778&ev=PageView&noscript=1"
             <a href="#testimonials" class="block py-1 text-text-dark hover:text-blue-600 transition">শিক্ষার্থীদের কথা</a>
             
             <div class="wave-wrapper inline-block w-full relative header-cta-pulse">
-                <a href="#enroll" 
+                <a href="#enroll" id="registerBtn"
                     class="mt-3 inline-flex w-full items-center justify-center px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-sm font-bold text-white shadow-md relative z-10">
                     রেজিস্টার করুন
                 </a>
@@ -1029,7 +1029,7 @@ src="https://www.facebook.com/tr?id=1189889029318778&ev=PageView&noscript=1"
             <!-- CTA Button with Wave Animation -->
             <div class="wave-wrapper inline-block relative z-10">
                 <a href="https://wa.me/9432149255?text=আমি%20আপনার%20Webinar%20Join%20করতে%20আগ্রহী।" 
-                    target="_blank"
+                    target="_blank" id="whatsappRegisterBtn"
                     class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-violet-600 text-lg font-bold text-white shadow-2xl shadow-violet-500/50 transition transform hover:scale-[1.05] duration-300 relative animated-cta-button-v2">
                     তাড়াতাড়ি রেজিস্টার করুন (WhatsApp)
                 </a>
@@ -1069,7 +1069,7 @@ src="https://www.facebook.com/tr?id=1189889029318778&ev=PageView&noscript=1"
         </div>
         
         <!-- CTA Button -->
-        <a href="#enroll" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-sm font-bold text-white shadow-lg transition transform hover:scale-[1.05] duration-300 flex-shrink-0">
+        <a href="#enroll" id="registerBtn" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-sm font-bold text-white shadow-lg transition transform hover:scale-[1.05] duration-300 flex-shrink-0">
             রেজিস্টার করুন
         </a>
     </div>
@@ -1081,5 +1081,24 @@ src="https://www.facebook.com/tr?id=1189889029318778&ev=PageView&noscript=1"
     <script src="script.js"></script>
 
 <div id="socialProofContainer" class="fixed bottom-24 right-0 z-[9999] space-y-3 pointer-events-none sm:bottom-[80px]">    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // রেজিস্টার বাটন ক্লিক ট্র্যাক
+  document.getElementById("registerBtn")?.addEventListener("click", function () {
+    fbq('track', 'CompleteRegistration');
+  });
+
+  // হোয়াটসঅ্যাপ বাটন ক্লিক ট্র্যাক
+  document.getElementById("whatsappRegisterBtn")?.addEventListener("click", function () {
+    fbq('track', 'Contact');
+  });
+
+});
+</script>
+
+
+
 </body>
 </html>
