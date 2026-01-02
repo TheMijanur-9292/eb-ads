@@ -1,0 +1,541 @@
+/* index.css */
+
+/*
+|==========================================================================
+| GLOBAL & GENERAL STYLES (Hover Effects and Spacing)
+|==========================================================================
+*/
+
+/* --- General Hover Effects --- */
+.hover-effect:hover {
+    box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.15), 0 4px 6px -2px rgba(60, 100, 200, 0.1) !important; 
+    transform: translateY(-5px) !important; 
+    border-color: #8b5cf6 !important; 
+}
+
+/* --- Compact Section Spacing (Original Tailwind Reset/Overrides) --- */
+section {
+    padding-top: 1rem !important;
+    padding-bottom: 4rem !important;
+}
+
+/* --- FIX: STICKY HEADER OVERLAP FIX --- */
+/* Pushing H2 headings down visually to prevent clipping under the fixed header */
+#overview h2, 
+#instructor h2, 
+#outcomes h2, 
+#testimonials h2, 
+#bonuses h2,
+#curriculum h2,
+.stat-header-animation h2 {
+    padding-top: 80px !important; 
+    margin-top: -80px !important; 
+}
+
+
+/*
+|==========================================================================
+| 1. HERO SECTION AUTO ANIMATIONS (Blue-Violet)
+|==========================================================================
+*/
+
+/* FIX: H1 Overlap Issue */
+.heading-line-fix {
+    line-height: 1.15 !important; 
+}
+.heading-line-fix span {
+    line-height: 1.25 !important;
+}
+
+/* 1. Subtle Floating Effect for the Information Card */
+.animated-floating-card {
+    animation: floating-shadow 4s infinite alternate;
+}
+@keyframes floating-shadow {
+    0% { transform: translateY(0); box-shadow: 0 10px 20px rgba(139, 92, 246, 0.15); }
+    100% { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(139, 92, 246, 0.3); }
+}
+
+/* 2. Background Gradient Pulse (More Vibrant Colors) */
+.animated-bg-gradient-v2 {
+    background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #3b82f6);
+    background-size: 400% 400%;
+    animation: gradient-flow 15s ease infinite;
+}
+@keyframes gradient-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 3. CTA Button Smart Pulse & Gradient Shift */
+.animated-cta-button-v2 {
+    background-size: 200% auto;
+    animation: gradient-shift-smart 4s linear infinite, cta-pulse-3d 2s infinite alternate ease-in-out;
+}
+@keyframes gradient-shift-smart {
+    to { background-position: 200% center; }
+}
+@keyframes cta-pulse-3d {
+    0% { transform: scale(1); box-shadow: 0 5px 15px rgba(139, 92, 246, 0.4); } 
+    100% { transform: scale(1.02); box-shadow: 0 8px 20px rgba(60, 100, 200, 0.6); } 
+}
+
+/* 4. On-Load Slide-In Animation for Main Content (FIXED INITIAL STATE) */
+.hero-content-left {
+    /* REMOVED: opacity: 0; */
+    transform: translateY(20px);
+    animation: slide-up-fade 0.8s ease-out 0.3s forwards;
+}
+
+@keyframes slide-up-fade {
+    /* REMOVED: initial opacity: 0; */
+    0% { opacity: 0; transform: translateY(20px); } /* Added 0% state for smooth start */
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 5. Subtle Pulse on Info Box */
+.hero-info-box {
+    animation: subtle-pulse 3s infinite alternate;
+}
+@keyframes subtle-pulse {
+    0% { border-color: #93c5fd; } 
+    100% { border-color: #a78bfa; } 
+}
+
+/* 6. Smart Colour Change for Heading */
+.hero-heading-animation { animation: color-shift 10s infinite alternate; }
+@keyframes color-shift {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(30deg); } 
+}
+
+
+/*
+|==========================================================================
+| 2. HEADER CTA ANIMATION
+|==========================================================================
+*/
+
+.wave-wrapper { display: inline-block; }
+.wave-wrapper a { position: relative; z-index: 2; }
+.wave-wrapper:before {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 100%; height: 100%;
+    background-color: #8b5cf6; 
+    border-radius: 12px;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+    animation: pulse-wave 2s infinite; 
+}
+
+@keyframes pulse-wave {
+    0% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+    100% { transform: translate(-50%, -50%) scale(1.4); opacity: 0; }
+}
+
+
+/*
+|==========================================================================
+| 3. TESTIMONIAL SCROLLING CAROUSEL FIXES
+|==========================================================================
+*/
+
+/*
+|==========================================================================
+| 3. TESTIMONIAL SCROLLING CAROUSEL FIXES (UPDATED for Manual Scroll & No Pause)
+|==========================================================================
+*/
+
+.scrolling-wrapper {
+    /* Manual Scroll Enabled - Hides the system scrollbar but allows scrolling */
+    overflow-x: auto !important; /* Allow horizontal scrolling */
+    overflow-y: hidden !important;
+    position: relative !important;
+    
+    /* Disabling the default scrollbar visually for a cleaner look */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+    /* Ensures items stay in one row */
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+/* Hide scrollbar for Chrome/Safari */
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.scrolling-content {
+    display: flex !important; 
+    flex-wrap: nowrap !important; /* GUARANTEED Single Line */
+    width: max-content !important; 
+    
+    /* Animation remains active */
+    animation: slide 50s linear infinite !important; 
+}
+
+/* *** REMOVED: .scrolling-content:hover { animation-play-state: paused !important; } *** */
+
+
+.testimonial-card {
+    min-width: 320px !important; 
+    width: 320px !important; 
+    margin-right: 20px !important;
+    padding: 20px !important;
+    flex-shrink: 0 !important; 
+    box-sizing: border-box !important; 
+    white-space: normal !important; 
+}
+
+.scrolling-content-duplicate {
+    display: flex !important;
+    flex-wrap: nowrap !important; 
+    width: max-content !important; 
+}
+
+/* Scrolling Animation Keyframes remain unchanged */
+@keyframes slide {
+    from { transform: translateX(0%); }
+    to { transform: translateX(-50%); }
+}
+
+/*
+|==========================================================================
+| 10. TESTIMONIALS SECTION ANIMATIONS
+|==========================================================================
+*/
+
+/* --- Testimonial Card Subtle Pulse (Keep this for animation) --- */
+.testimonial-card-pulse {
+    /* Keep the automatic animation active */
+    animation: subtle-float 4s infinite alternate ease-in-out;
+}
+/* ... rest of the section 10 CSS remains the same ... */
+
+/*
+|==========================================================================
+| 4. SOCIAL PROOF & FIXED CTA BANNER ANIMATION (UPDATED FOR EDGE-TO-EDGE)
+|==========================================================================
+*/
+
+/* --- Social Proof Pop-up Styles & Animation --- */
+.social-proof-popup {
+    /* Updated background: Use Gradient for professional look */
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6); 
+    color: white;
+    
+    /* FIX 1: Compact Size */
+    padding: 8px 12px; /* Reduced padding */
+    border-radius: 6px 0 0 6px; /* Sharper edges on the right side */
+    
+    /* FIX 2: Professional Shadow (Violet glow) */
+    box-shadow: -4px 4px 10px rgba(139, 92, 246, 0.4); 
+    
+    font-size: 14px;
+    opacity: 0; 
+    transition: opacity 0.4s, transform 0.4s; 
+    
+    /* Starts off-screen right */
+    transform: translateX(100%);
+    min-width: 200px; /* Reduced minimum width */
+    max-width: 250px; /* Reduced maximum width */
+    
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Entry Animation Class */
+.social-proof-popup.show {
+    opacity: 1;
+    transform: translateX(0); /* Slides in right to edge */
+}
+
+/* Exit Animation Class (Used when hiding) */
+.social-proof-popup.hide {
+    opacity: 0;
+    transform: translateX(100%); /* Slides out right to edge */
+}
+
+/* Icon style */
+.social-proof-icon {
+    font-size: 16px;
+    line-height: 1;
+    margin-right: 4px; /* Space between icon and text */
+}
+
+/*
+|==========================================================================
+| 5. STATS SECTION HIGH ANIMATION
+|==========================================================================
+*/
+
+/* --- Stat Card Slide-in (FIXED INITIAL STATE) --- */
+.stat-slide-in {
+    /* REMOVED: opacity: 0; */
+    transform: translateY(30px);
+    animation: slide-up-bounce 0.8s ease-out forwards;
+}
+
+@keyframes slide-up-bounce {
+    0% {
+        opacity: 0; /* Ensuring animation starts hidden */
+        transform: translateY(30px);
+    }
+    80% {
+        transform: translateY(-5px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Stat Card Persistent Highlight (Radial Pulse) --- */
+.stat-highlight { position: relative; overflow: hidden; z-index: 1; }
+.stat-highlight:before {
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0) 50%);
+    opacity: 0; animation: radial-pulse 4s linear infinite alternate; z-index: 2; pointer-events: none;
+}
+@keyframes radial-pulse {
+    0% { transform: translate(0, 0) scale(0.8); opacity: 0; }
+    50% { transform: translate(10%, 10%) scale(1.2); opacity: 0.5; }
+    100% { transform: translate(-10%, -10%) scale(0.8); opacity: 0; }
+}
+
+/* --- Stat Card Auto Pulse (Subtle movement) --- */
+.stat-card-animated { animation: stat-pulse 3s infinite alternate ease-in-out; }
+@keyframes stat-pulse {
+    0% { transform: scale(1); box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3); }
+    100% { transform: scale(1.01); box-shadow: 0 6px 15px rgba(60, 100, 200, 0.5); }
+}
+
+
+/*
+|==========================================================================
+| 6. STATS HEADER ANIMATION
+|==========================================================================
+*/
+
+.stat-header-animation { opacity: 0; transform: translateY(15px); animation: slide-up-fade 0.7s ease-out 0.1s forwards; }
+
+
+/*
+|==========================================================================
+| 7. OVERVIEW SECTION ANIMATIONS (Feature Cards)
+|==========================================================================
+*/
+
+/* --- Header Animation (Reuses slide-up-fade) --- */
+.animated-header-v2 { opacity: 0; transform: translateY(15px); animation: slide-up-fade 0.7s ease-out 0.1s forwards; }
+
+
+/* --- Feature Card Staggered Animation (FIXED INITIAL STATE) --- */
+.animated-feature-card {
+    /* REMOVED: opacity: 0; */
+    transform: translateY(20px);
+    animation: slide-up-fade 0.8s ease-out forwards;
+}
+
+/* --- Icon Container Gradient Background and Pulse (Reusable) --- */
+.icon-container-gradient { background: linear-gradient(45deg, #3b82f6, #8b5cf6); background-size: 200% 200%; }
+.animated-icon-pulse { animation: icon-pulse-flow 5s infinite alternate; }
+@keyframes icon-pulse-flow {
+    0% { background-position: 0% 50%; box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); }
+    100% { background-position: 100% 50%; box-shadow: 0 0 0 5px rgba(60, 100, 200, 0); }
+}
+
+
+/*
+|==========================================================================
+| 8. INSTRUCTOR SECTION ANIMATIONS
+|==========================================================================
+*/
+
+/* --- Bio Content Slide-in (FIXED INITIAL STATE) --- */
+.instructor-bio-animation {
+    /* REMOVED: opacity: 0; */
+    transform: translateY(20px);
+    animation: slide-up-fade 0.8s ease-out 0.2s forwards;
+}
+
+/* --- Instructor Image Frame Animation --- */
+.instructor-image-frame {
+    border-image: linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6) 1;
+    border-image-slice: 1;
+    background-size: 200% 200%;
+    animation: border-flow 6s linear infinite;
+    background-color: white; 
+    box-sizing: content-box;
+}
+
+@keyframes border-flow {
+    0% { border-image-source: linear-gradient(45deg, #3b82f6, #8b5cf6); }
+    50% { border-image-source: linear-gradient(225deg, #8b5cf6, #3b82f6); }
+    100% { border-image-source: linear-gradient(45deg, #3b82f6, #8b5cf6); }
+}
+
+/* --- Achievements Box Pulse --- */
+.instructor-achievements-box { animation: achievements-pulse 5s infinite alternate ease-in-out; box-shadow: 0 10px 20px rgba(139, 92, 246, 0.1); }
+@keyframes achievements-pulse {
+    0% { transform: scale(1); box-shadow: 0 10px 20px rgba(139, 92, 246, 0.1); }
+    100% { transform: scale(1.005); box-shadow: 0 15px 30px rgba(60, 100, 200, 0.2); }
+}
+
+.animated-frame-background {
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6, #3b82f6);
+    background-size: 400% 400%;
+    filter: blur(8px); 
+    animation: gradient-flow 10s linear infinite; 
+    z-index: 0;
+}
+
+
+/*
+|==========================================================================
+| 9. CURRICULUM & OUTCOMES SECTION ANIMATIONS
+|==========================================================================
+*/
+
+/* --- Staggered Slide-in Animation for Outcome/Curriculum Cards (FIXED INITIAL STATE) --- */
+.animated-outcome-card, .animated-curriculum-item {
+    /* REMOVED: opacity: 0; */
+    transform: translateY(20px);
+    animation: slide-up-fade 0.8s ease-out forwards;
+    padding: 10px; 
+}
+
+.animated-curriculum-item {
+    transform: translateX(-30px);
+    animation: slide-in-fade 0.7s ease-out forwards;
+}
+
+@keyframes slide-in-fade {
+    0% { opacity: 0; transform: translateX(-30px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* --- Main Curriculum Box Animated Border --- */
+.curriculum-main-box {
+    animation: border-flow-subtle 8s linear infinite;
+    border-image: linear-gradient(45deg, #3b82f6, #8b5cf6) 1;
+    border-image-slice: 1;
+    background-color: #f7f7ff; 
+}
+@keyframes border-flow-subtle {
+    0% { border-image-source: linear-gradient(45deg, #3b82f6, #8b5cf6); }
+    50% { border-image-source: linear-gradient(225deg, #8b5cf6, #3b82f6); }
+    100% { border-image-source: linear-gradient(45deg, #3b82f6, #8b5cf6); }
+}
+
+.animated-bullet-pulse {
+    background: linear-gradient(45deg, #3b82f6, #8b5cf6); 
+    background-size: 200% 200%;
+    animation: gradient-shift-smart 4s linear infinite, bullet-pulse 2s infinite alternate ease-in-out;
+}
+@keyframes bullet-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4); }
+    100% { box-shadow: 0 0 0 5px rgba(139, 92, 246, 0); }
+}
+
+
+/*
+|==========================================================================
+| 10. BONUSES SECTION ANIMATIONS
+|==========================================================================
+*/
+
+/* --- Bonus Card Staggered Slide-in (FIXED INITIAL STATE) --- */
+.animated-bonus-card {
+    /* REMOVED: opacity: 0; */
+    transform: translateY(20px);
+    animation: slide-up-fade 0.8s ease-out forwards;
+}
+
+/* --- Total Value Box Border Pulse (Pulse effect on the border) --- */
+.animated-value-box {
+    border-image: linear-gradient(45deg, #3b82f6, #8b5cf6) 1;
+    border-image-slice: 1;
+    background-size: 200% 200%;
+    animation: border-pulse-flow 6s linear infinite;
+}
+@keyframes border-pulse-flow {
+    0% { border-image-source: linear-gradient(45deg, #3b82f6, #8b5cf6); box-shadow: 0 0 15px rgba(139, 92, 246, 0.2); }
+    50% { border-image-source: linear-gradient(225deg, #8b5cf6, #3b82f6); box-shadow: 0 0 20px rgba(60, 100, 200, 0.4); } 
+    100% { border-image-source: linear-gradient(45deg, #3b82f6, #8b5cf6); box-shadow: 0 0 15px rgba(139, 92, 246, 0.2); }
+}
+
+
+/*
+|==========================================================================
+| 11. TESTIMONIALS SECTION ANIMATIONS
+|==========================================================================
+*/
+
+/* --- Testimonial Card Subtle Pulse --- */
+.testimonial-card-pulse { animation: subtle-float 4s infinite alternate ease-in-out; }
+@keyframes subtle-float {
+    0% { transform: translateY(0); box-shadow: 0 5px 10px rgba(139, 92, 246, 0.05); }
+    100% { transform: translateY(-2px); box-shadow: 0 8px 15px rgba(60, 100, 200, 0.1); }
+}
+
+/* --- Testimonial Icon Gradient --- */
+.testimonial-icon-gradient { background: linear-gradient(45deg, #3b82f6, #8b5cf6); background-size: 200% 200%; animation: gradient-shift-smart 4s linear infinite; }
+
+
+/*
+|==========================================================================
+| 12. ENROLL SECTION ANIMATIONS (Final CTA)
+|==========================================================================
+*/
+
+/* --- Main Box Animated Border --- */
+.enroll-box-animated { border-image: linear-gradient(45deg, #3b82f6, #8b5cf6) 1; border-image-slice: 1; background-size: 200% 200%; animation: border-pulse-flow 8s linear infinite; background-color: #f7f7ff; }
+
+/* --- Timer Pulse Effect --- */
+.animated-timer-pulse { animation: timer-pulse-bg 2s infinite alternate; }
+@keyframes timer-pulse-bg {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.6); }
+    100% { transform: scale(1.03); box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+}
+
+
+/* --- CSS for Fixed CTA Banner Delay and Animation --- */
+
+/*
+|==========================================================================
+| FIXED CTA BANNER ANIMATION FIXES
+|==========================================================================
+*/
+
+/*
+|==========================================================================
+| FIXED CTA BANNER ANIMATION FIXES (FINAL)
+|==========================================================================
+*/
+
+/* --- Global Transition for the Fixed Banner ID (Ensures smooth animation when JS modifies classes) --- */
+#fixedCtaBanner {
+    /* Critical: Apply transition directly to the element ID */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out !important;
+}
+
+/* --- 1. Initial State (Hidden and Off-Screen) --- */
+.cta-hidden {
+    opacity: 0 !important;
+    /* Ensure it starts 100% off-screen down, despite 'bottom-0' in HTML */
+    transform: translateY(100%) !important; 
+}
+
+/* --- 2. Final State (Visible and On-Screen) --- */
+.cta-visible {
+    opacity: 1 !important;
+    /* Returns to the original 'bottom-0' position */
+    transform: translateY(0) !important; 
+}

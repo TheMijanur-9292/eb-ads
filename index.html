@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>বাংলায় ই-কমার্স: অ্যামাজন, ফ্লিপকার্ট ও মীশোতে ব্যবসা শুরু করুন</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font (Inter) for modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="index.css">
+
+    <meta name="description" content="বাংলায় ই-কমার্স: অ্যামাজন, ফ্লিপকার্ট ও মীশোতে ব্যবসা শুরু করুন। ঘরে বসে অনলাইন ব্যবসা শেখার পূর্ণাঙ্গ বাংলা কোর্স।" />
+
+    <!-- Tailwind config for custom colors/font & KEYFRAMES (Required for CSS animation) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary': '#1d4ed8', // blue-700
+                        'secondary': '#f3f4f6', // light gray for contrast
+                        'bg-light': '#ffffff',
+                        'text-dark': '#1e293b',
+                        'text-muted': '#475569',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    keyframes: {
+                        slide: {
+                            '0%': { transform: 'translateX(0)' },
+                            '100%': { transform: 'translateX(-100%)' },
+                        }
+                    },
+                    animation: {
+                        slide: 'slide 50s linear infinite', /* Compact speed */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-bg-light text-text-dark font-sans">
+
+    <!-- Navbar -->
+   <header class="sticky top-0 z-50 bg-white shadow-lg border-b border-violet-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+            
+            <a href="#hero" class="flex items-center space-x-2">
+                
+                <img src="logo.png" alt="Ecom Buddy Logo" class="w-10 h-10 rounded-full object-cover shadow-lg shadow-violet-300">
+                
+                <div class="flex flex-col leading-tight">
+                    <span class="text-base font-extrabold text-text-dark">Ecom Buddy</span>
+                    <span class="text-[10px] sm:text-xs text-violet-600 font-semibold">Amazon · Flipkart · Meesho</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-7 text-sm font-semibold">
+                <a href="#overview" class="nav-link text-text-dark hover:text-blue-600 transition duration-200">কোর্স সম্পর্কে</a>
+                <a href="#instructor" class="nav-link text-text-dark hover:text-blue-600 transition duration-200">ইন্সট্রাক্টর</a>
+                <a href="#outcomes" class="nav-link text-text-dark hover:text-blue-600 transition duration-200">আপনি যা শিখবেন</a>
+                <a href="#testimonials" class="nav-link text-text-dark hover:text-blue-600 transition duration-200">শিক্ষার্থীদের কথা</a>
+            </nav>
+
+            <div class="hidden md:flex">
+                <div class="wave-wrapper inline-block relative header-cta-pulse">
+                    <a href="#enroll" 
+                        class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-sm font-bold text-white shadow-xl shadow-violet-400/50 transition transform hover:scale-[1.03] duration-300 relative z-10">
+                         রেজিস্টার করুন
+                    </a>
+                </div>
+            </div>
+
+            <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center p-2 rounded-lg border border-violet-300 hover:bg-violet-50 transition">
+                <span class="sr-only">Open main menu</span>
+                <svg id="menuIcon" class="h-6 w-6 text-text-dark" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <nav id="mobileMenu" class="md:hidden hidden border-t border-violet-200 bg-white">
+        <div class="px-4 py-4 space-y-3 text-sm font-medium">
+            <a href="#overview" class="block py-1 text-text-dark hover:text-blue-600 transition">কোর্স সম্পর্কে</a>
+            <a href="#instructor" class="block py-1 text-text-dark hover:text-blue-600 transition">ইন্সট্রাক্টর</a>
+            <a href="#outcomes" class="block py-1 text-text-dark hover:text-blue-600 transition">আপনি যা শিখবেন</a>
+            <a href="#testimonials" class="block py-1 text-text-dark hover:text-blue-600 transition">শিক্ষার্থীদের কথা</a>
+            
+            <div class="wave-wrapper inline-block w-full relative header-cta-pulse">
+                <a href="#enroll" 
+                    class="mt-3 inline-flex w-full items-center justify-center px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600 to-violet-600 text-sm font-bold text-white shadow-md relative z-10">
+                    রেজিস্টার করুন
+                </a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-16 sm:pt-16 sm:pb-20 bg-white">
+    <div class="absolute inset-0 z-0 opacity-15 blur-3xl animated-bg-gradient-v2"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+            
+            <div class="hero-content-left">
+                <div class="inline-flex items-center px-4 py-1.5 rounded-full bg-violet-600/15 text-xs font-semibold text-violet-700 mb-4 border border-violet-600/40 animated-tag">
+                    বাংলায় পূর্ণাঙ্গ ই-কমার্স কোর্স
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-text-dark mb-4 heading-line-fix">
+    বাংলায় ই-কমার্স:<br />
+    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 block mt-1 hero-heading-animation">
+        অ্যামাজন, ফ্লিপকার্ট ও মীশোতে ব্যবসা শুরু করুন
+    </span>
+</h1>
+                <p class="text-base text-gray-700 leading-relaxed max-w-xl mb-7">
+                    পশ্চিমবঙ্গ ও বাংলাভাষী উদ্যোক্তাদের জন্য তৈরি এই কোর্সে শিখবেন কীভাবে ঘরে বসেই অ্যামাজন, ফ্লিপকার্ট ও মীশোতে
+                    লাভজনক অনলাইন স্টোর গড়ে তুলবেন, পণ্য নির্বাচন করবেন, আর মাসে লক্ষাধিক টাকার আয়ের পথে হাঁটবেন।
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-center gap-3 mb-8">
+                    <a href="#enroll" 
+                
+                        class="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-violet-600 text-base font-bold text-white shadow-2xl shadow-violet-500/50 transition transform hover:scale-[1.05] duration-300 animated-cta-button-v2">
+                        Free webinar Join করুন
+                    </a>
+                    
+                    <button onclick="scrollToSection('overview')"
+                        class="inline-flex items-center justify-center w-full sm:w-auto px-5 py-3 rounded-xl border-2 border-violet-400 text-base font-medium text-violet-700 hover:border-blue-600 hover:text-blue-600 transition duration-300 transform hover:translate-y-[-2px]">
+                        কোর্স সম্পর্কে জানুন
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 text-xs sm:text-sm">
+    <div class="bg-gradient-to-br from-blue-600 to-violet-600 rounded-xl p-3 shadow-2xl shadow-violet-500/50 hover-effect hero-feature-card">
+        <p class="text-white mb-0.5 opacity-80">মার্কেটপ্লেস</p>
+        <p class="font-bold text-white">Amazon · Flipkart · Meesho</p>
+    </div>
+    
+    <div class="bg-gradient-to-br from-blue-600 to-violet-600 rounded-xl p-3 shadow-2xl shadow-violet-500/50 hover-effect hero-feature-card" style="animation-delay: 0.1s;">
+        <p class="text-white mb-0.5 opacity-80">ব্যবসা শিখুন</p>
+        <p class="font-bold text-white">বাংলায় ধাপে ধাপে</p>
+    </div>
+    
+    <div class="bg-gradient-to-br from-blue-600 to-violet-600 rounded-xl p-3 shadow-2xl shadow-violet-500/50 hover-effect hero-feature-card" style="animation-delay: 0.2s;">
+        <p class="text-white mb-0.5 opacity-80">টার্গেট আয়</p>
+        <p class="font-bold text-white">মাসে ₹৫০,০০০+</p>
+    </div>
+    
+</div>
+            </div>
+
+            <div class="relative hidden lg:block lg:mt-[-80px] animated-floating-card">
+                  <div class="relative bg-white border-2 border-blue-200 rounded-3xl p-6 shadow-2xl shadow-violet-400/50 hero-info-box">
+        
+                    <h2 class="text-lg font-extrabold text-blue-600 mb-3 border-b border-violet-300 pb-2">
+                        📈 পশ্চিমবঙ্গের ই-কমার্সে সম্ভাবনা
+                    </h2>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                        বর্তমানে <span class="text-text-dark font-bold">পশ্চিমবঙ্গের ই-কমার্স বাজার দ্রুত বাড়ছে</span>। অ্যামাজন জানিয়েছে, রাজ্যে <span class="text-text-dark font-bold">উৎসব মৌসুমে বিক্রয় দ্বিগুণ অঙ্কে বেড়েছে</span>
+                        এবং প্রায় <span class="text-text-dark font-bold">৫৫,০০০ বিক্রেতা প্ল্যাটফর্মে যুক্ত হয়েছেন</span>। ফ্লিপকার্ট স্থানীয় কারিগর, তাঁতী ও ক্ষুদ্র উদ্যোগীদের
+                        সহায়তায় <span class="text-text-dark font-bold">রাজ্য সরকারের সঙ্গে চুক্তি করেছে</span>। তবু <span class="text-text-dark font-bold">বাংলাভাষী উদ্যোক্তাদের মধ্যে এই সম্ভাবনাকে কাজে লাগানোর
+                        সচেতনতা এখনো কম</span>।
+                    </p>
+                    <p class="text-sm text-gray-700 leading-relaxed mb-3">
+                        <span class="text-text-dark font-bold">ভারতের অনলাইন খুচরা বাজার</span> আগামী এক-দশকে প্রায় <span class="text-text-dark font-bold">১৭০-১৯০ বিলিয়ন মার্কিন ডলারে পৌঁছাতে পারে</span>। মীশো একাই প্রায়
+                        <span class="text-text-dark font-bold">৪,০০,০০০ বিক্রেতাকে সহায়তা করছে</span>। অর্থাৎ দেশের বড় মার্কেটপ্লেসগুলিতে <span class="text-text-dark font-bold">এখনই উদ্যোগ শুরু করলে বাংলাভাষী
+                        উদ্যোক্তাদের জন্য বিশাল সুযোগ তৈরি হতে পারে</span>।
+                    </p>
+                    <p class="text-xs text-gray-400 pt-2 border-t border-gray-100">
+                        *উপরের তথ্যগুলো বিভিন্ন সংবাদমাধ্যম ও রিপোর্টের উপর ভিত্তি করে উল্লেখ করা হয়েছে।
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    </section>
+    
+    <!-- STATS COUNTER / COMPACT DESIGN (NO ICON, BLUE HOVER) -->
+    <!-- Stats/Achievements Section (Updated with Smart Headline) -->
+<!-- Stats/Achievements Section (High Animation Blue-Violet Theme) -->
+<section class="bg-white text-text-dark py-10 sm:py-12 border-t border-b border-violet-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header with Animation -->
+        <div class="mb-10 text-center stat-header-animation">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 mb-3">
+                আমাদের সাফল্যের সংখ্যা এবং অভিজ্ঞতা
+            </h2>
+            <p class="text-base text-gray-700 max-w-3xl mx-auto">
+                এই সংখ্যাগুলি আমাদের কোর্সের গুণমান, বাজারে অভিজ্ঞতা এবং শিক্ষার্থীদের জীবনে আনা ইতিবাচক পরিবর্তন প্রমাণ করে।
+            </p>
+        </div>
+        
+        <!-- Stats Cards Container -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            
+            <!-- Stat 1: Students Mentored (High Animation) -->
+            <div class="stat-card-animated stat-slide-in stat-highlight bg-gradient-to-br from-blue-600 to-violet-600 p-4 rounded-xl shadow-2xl shadow-violet-500/50 transition duration-300 hover:scale-[1.05]">
+                <p class="text-3xl sm:text-4xl font-extrabold mb-1 text-white">
+                    <span id="stat1" data-target="200" class="counter">0</span><span class="text-xl">+</span>
+                </p>
+                <p class="text-xs uppercase tracking-wider font-semibold text-white opacity-80 mt-1">
+                    শিক্ষার্থীদের মেন্টরিং
+                </p>
+            </div>
+
+            <!-- Stat 2: Businesses and Brands (High Animation - Staggered) -->
+            <div class="stat-card-animated stat-slide-in stat-highlight bg-gradient-to-br from-blue-600 to-violet-600 p-4 rounded-xl shadow-2xl shadow-violet-500/50 transition duration-300 hover:scale-[1.05]" style="animation-delay: 0.1s;">
+                <p class="text-3xl sm:text-4xl font-extrabold mb-1 text-white">
+                    <span id="stat2" data-target="10" class="counter">0</span><span class="text-xl">+</span>
+                </p>
+                <p class="text-xs uppercase tracking-wider font-semibold text-white opacity-80 mt-1">
+                    ব্যবসা ও ব্র্যান্ড
+                </p>
+            </div>
+
+            <!-- Stat 3: Ad Spend Managed (Lakhs) (High Animation - Staggered) -->
+            <div class="stat-card-animated stat-slide-in stat-highlight bg-gradient-to-br from-blue-600 to-violet-600 p-4 rounded-xl shadow-2xl shadow-violet-500/50 transition duration-300 hover:scale-[1.05]" style="animation-delay: 0.2s;">
+                <p class="text-3xl sm:text-4xl font-extrabold mb-1 text-white">
+                    <span id="stat3" data-target="2" class="counter">0</span><span class="text-xl"> লক্ষ+</span>
+                </p>
+                <p class="text-xs uppercase tracking-wider font-semibold text-white opacity-80 mt-1">
+                    বিজ্ঞাপন খরচ পরিচালনা
+                </p>
+            </div>
+
+            <!-- Stat 4: Years Of Experience (High Animation - Staggered) -->
+            <div class="stat-card-animated stat-slide-in stat-highlight bg-gradient-to-br from-blue-600 to-violet-600 p-4 rounded-xl shadow-2xl shadow-violet-500/50 transition duration-300 hover:scale-[1.05]" style="animation-delay: 0.3s;">
+                <p class="text-3xl sm:text-4xl font-extrabold mb-1 text-white">
+                    <span id="stat4" data-target="2.5" class="counter">0</span><span class="text-xl">+</span>
+                </p>
+                <p class="text-xs uppercase tracking-wider font-semibold text-white opacity-80 mt-1">
+                    বছরের অভিজ্ঞতা
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Course Overview (New Animated Blue-Violet Theme) -->
+<section id="overview" class="py-16 sm:py-20 border-t border-violet-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header with Animation -->
+        <div class="mb-10 text-center animated-header-v2">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 mb-3">
+                কোর্সটি কেন তৈরি করা হয়েছে?
+            </h2>
+            <p class="text-base text-gray-700 max-w-3xl mx-auto">
+                এই কোর্সটি বিশেষভাবে তৈরি করা হয়েছে বাংলাভাষী নতুন ও মাঝারি স্তরের উদ্যোক্তাদের জন্য,
+                যারা অ্যামাজন, ফ্লিপকার্ট ও মীশোতে ব্যবসা শুরু করতে চান কিন্তু কোথা থেকে শুরু করবেন বুঝতে পারছেন না।
+            </p>
+        </div>
+
+        <!-- Feature Cards Grid -->
+        <div class="grid md:grid-cols-3 gap-6 text-sm">
+            
+            <!-- Card 1: বাংলায় প্র্যাক্টিকাল গাইড (Staggered Animation Start) -->
+            <div class="group bg-white border-2 border-violet-200 rounded-2xl p-5 shadow-xl transition duration-300 hover-effect animated-feature-card" style="animation-delay: 0.1s;">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3 text-xl font-bold icon-container-gradient animated-icon-pulse">
+                    <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.5v11m4-8.5l-4-4-4 4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-text-dark mb-2 text-lg group-hover:text-blue-600 transition duration-300">
+                    বাংলায় প্র্যাক্টিকাল গাইড
+                </h3>
+                <p class="text-gray-600">
+                    সব কিছু ব্যাখ্যা করা হয়েছে সহজ বাংলায়, বাস্তব উদাহরণ ও লাইভ ডেমো সহ। ইংরেজি টার্মের জটিলতা ছাড়াই
+                    নিজে নিজে করে শেখার মতভাবে সাজানো হয়েছে।
+                </p>
+            </div>
+
+            <!-- Card 2: নতুনদের জন্যও উপযোগী -->
+            <div class="group bg-white border-2 border-violet-200 rounded-2xl p-5 shadow-xl transition duration-300 hover-effect animated-feature-card" style="animation-delay: 0.2s;">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3 text-xl font-bold icon-container-gradient animated-icon-pulse">
+                    <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2v2a2 2 0 01-2 2h-1a2 2 0 01-2-2V9a2 2 0 012-2zM5 13H4a2 2 0 00-2 2v1m15-4h2a2 2 0 012 2v1" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-text-dark mb-2 text-lg group-hover:text-blue-600 transition duration-300">
+                    নতুনদের জন্যও উপযোগী
+                </h3>
+                <p class="text-gray-600">
+                    আপনি আগে কখনো ব্যবসা না করলেও কিংবা শুধু অফলাইনে কাজ করে থাকলেও, একদম শুরু থেকে স্টোর সেটআপ পর্যন্ত
+                    সব ধাপ দেখানো হবে।
+                </p>
+            </div>
+
+            <!-- Card 3: প্র্যাক্টিকাল আয়ের ফোকাস -->
+            <div class="group bg-white border-2 border-violet-200 rounded-2xl p-5 shadow-xl transition duration-300 hover-effect animated-feature-card" style="animation-delay: 0.3s;">
+                <div class="w-10 h-10 rounded-full flex items-center justify-center mb-3 text-xl font-bold icon-container-gradient animated-icon-pulse">
+                    <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8L11 2m7 16H6a2 2 0 01-2-2V6a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2z" />
+                    </svg>
+                </div>
+                <h3 class="font-bold text-text-dark mb-2 text-lg group-hover:text-blue-600 transition duration-300">
+                    প্র্যাক্টিকাল আয়ের ফোকাস
+                </h3>
+                <p class="text-gray-600">
+                    শুধু থিওরি নয়, কীভাবে মাসে নিয়মিত আয় তৈরি করা যায়, কীভাবে স্কেল করা যায়, এবং কীভাবে লাভজনকভাবে
+                    ব্যবসা চালিয়ে যেতে হয় সেগুলোতে বেশি ফোকাস।
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Instructor Section -->
+    <!-- Instructor Section (Animated Image Frame) -->
+<section id="instructor" class="py-16 sm:py-20 border-t border-violet-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-[1.5fr,1fr] gap-10 items-center">
+            
+            <!-- Left: Content & Bio -->
+            <div class="order-2 md:order-1 instructor-bio-animation">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-text-dark mb-3">
+                    ইন্সট্রাক্টর পরিচিতি: 
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">ওয়াদিল আলম</span>
+                </h2>
+                
+                <!-- Highlighted Quote/Key Info -->
+                <p class="text-base text-gray-700 leading-relaxed mb-3 border-l-4 border-violet-400 pl-4 bg-violet-50/50 p-2 rounded-md">
+                    ওয়াদিল আলম আমাদের কোর্সের প্রশিক্ষক। তিনি কম্পিউটার সায়েন্সে এম.টেক ডিগ্রি অর্জন করেছেন এবং একসময়
+                    বহুজাতিক সংস্থায় (MNC) কাজ করতেন।
+                </p>
+                
+                <p class="text-sm text-gray-600 leading-relaxed mb-3">
+                    পূর্ণকালীন চাকরির পাশাপাশি তিনি মাত্র ২.৫ বছরে অনলাইন প্ল্যাটফর্মে **১৫ লক্ষ টাকারও বেশি বিক্রি করেছেন**।
+                    এরপর থেকে তিনি বহু শিক্ষার্থীকে গাইড করেছেন, যাদের অনেকেই এখন প্রতিমাসে লক্ষাধিক টাকা আয় করছেন।
+                </p>
+                
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    তিনি লক্ষ্য করেছেন, বাংলাভাষী উদ্যোক্তারা ই-কমার্সে ভালো ফলাফল করলেও সাধারণত নিজেদের সাফল্যের গল্প
+                    প্রকাশ করতে স্বাচ্ছন্দ্য বোধ করেন না। সেই মানসিকতা বদলাতে এবং সবকিছু সহজভাবে বোঝাতে এই কৌশলভিত্তিক
+                    সম্পূর্ণ বাংলা কোর্স তৈরি করেছেন।
+                </p>
+            </div>
+            
+            <!-- Right: Image and Achievements (Order reversed for mobile) -->
+            <div class="order-1 md:order-2 flex flex-col items-center">
+                
+                <!-- **UPDATED: Image with Animated Frame Below** -->
+                <div class="relative w-48 h-48 mb-10 instructor-image-wrapper">
+                    <!-- Animated Box (The Shifting Gradient Frame, blurred for glow effect) -->
+                    <div class="absolute inset-0 rounded-full animated-frame-background"></div>
+                    
+                    <!-- Image Container (Slightly smaller, sits on top) -->
+                    <div class="relative w-44 h-44 top-2 left-2 rounded-full overflow-hidden shadow-2xl shadow-violet-500 z-10">
+                        <img src="wadil.png" alt="ওয়াদিল আলম - প্রশিক্ষক" class="w-full h-full object-cover rounded-full">
+                    </div>
+                </div>
+
+                <!-- Achievements Box (Animated) -->
+                <div class="bg-gradient-to-br from-blue-50 to-violet-50 border border-violet-200 rounded-2xl p-5 shadow-xl w-full instructor-achievements-box">
+                    <h3 class="text-lg font-extrabold text-blue-600 mb-3 border-b border-violet-300 pb-2">🏅 অর্জন</h3>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-600 mt-1 text-lg">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            </span>
+                            <span>২.৫ বছরে ১৫+ লক্ষ টাকার অনলাইন বিক্রি।</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-600 mt-1 text-lg">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-3.98c-.7 0-1.375-.157-2-.445L4.76 18.056c-1.34-1.026-1.545-2.062-1.045-3.031a5.6 5.6 0 012.879-2.825L10 9m0 0V3h4v4m0 0a2 2 0 10-4 0m4 0a2 2 0 10-4 0" /></svg>
+                            </span>
+                            <span>একাধিক শিক্ষার্থীকে মাসে লক্ষাধিক আয় করতে সফল গাইডেন্স।</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-violet-600 mt-1 text-lg">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10h18M3 14h18m-7-4v4" /></svg>
+                            </span>
+                            <span>অ্যামাজন, ফ্লিপকার্ট ও মীশোতে একাধিক সফল স্টোর পরিচালনা।</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Outcomes Section -->
+    <!-- Course Outcomes (New Animated Blue-Violet Theme) -->
+<section id="outcomes" class="py-16 sm:py-20 border-t border-violet-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="mb-10 text-center animated-header-v2">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 mb-3">
+                কোর্স শেষে আপনি যা অর্জন করবেন
+            </h2>
+            <p class="text-base text-gray-700 max-w-3xl mx-auto">
+                শুধু ভিডিও দেখা নয়, এই কোর্সের লক্ষ্য হলো আপনাকে বাস্তব রেজাল্টে নিয়ে যাওয়া। কোর্স শেষে আপনি নিজেই বুঝতে পারবেন,
+                অনলাইনে ব্যবসা চালানোর জন্য আপনার ভিত কতটা শক্ত হয়েছে।
+            </p>
+        </div>
+
+        <!-- Outcome Cards Grid (Using a 2x2 grid) -->
+        <div class="grid md:grid-cols-2 gap-6 text-base">
+            
+            <!-- Outcome Card 1: স্বনির্ভরতা (Icon: Shield/Self-Reliance) -->
+            <div class="group bg-white border-2 border-violet-200 rounded-2xl p-6 shadow-xl transition duration-300 hover-effect animated-outcome-card" style="animation-delay: 0.1s;">
+                <h3 class="font-extrabold text-text-dark mb-3 text-xl group-hover:text-blue-600 flex items-center gap-3">
+                    <span class="text-violet-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </span>
+                    স্বনির্ভরতা
+                </h3>
+                <p class="text-gray-600">
+                    নিজের স্টোর নিজে সেটআপ করে ঘরে বসেই আয় শুরু করতে পারবেন। কারও উপর নির্ভর না করে
+                    নিজেই স্টোর ম্যানেজ করার আত্মবিশ্বাস তৈরি হবে।
+                </p>
+            </div>
+
+            <!-- Outcome Card 2: আয় বৃদ্ধি (Icon: Trending Up/Growth) -->
+            <div class="group bg-white border-2 border-violet-200 rounded-2xl p-6 shadow-xl transition duration-300 hover-effect animated-outcome-card" style="animation-delay: 0.2s;">
+                <h3 class="font-extrabold text-text-dark mb-3 text-xl group-hover:text-blue-600 flex items-center gap-3">
+                    <span class="text-violet-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-line-chart"><path d="M3 3v18h18"/><path d="m18 10-5 5-4-4-5 5"/></svg>
+                    </span>
+                    আয় বৃদ্ধি
+                </h3>
+                <p class="text-gray-600">
+                    পার্টটাইম বা ফুলটাইম কাজের পাশাপাশি অনলাইন ব্যবসা থেকে অতিরিক্ত আয় তৈরি করতে পারবেন। লক্ষ্য থাকবে মাসে লক্ষাধিক টাকা আয়ের দিকে।
+                </p>
+            </div>
+
+            <!-- Outcome Card 3: পরিকল্পনা ও আত্মবিশ্বাস (Icon: Brain/Idea) -->
+            <div class="group bg-white border-2 border-violet-200 rounded-2xl p-6 shadow-xl transition duration-300 hover-effect animated-outcome-card" style="animation-delay: 0.3s;">
+                <h3 class="font-extrabold text-text-dark mb-3 text-xl group-hover:text-blue-600 flex items-center gap-3">
+                    <span class="text-violet-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-brain-cog"><path d="M12 21a2 2 0 0 1-2-2"/><path d="M10 19c0-1.7.7-3.3 1.8-4.4l.2-.2c1.1-1.1 2.7-1.8 4.4-1.8"/><path d="M14 21a2 2 0 0 0 2-2"/><path d="M16 19c0-1.7-.7-3.3-1.8-4.4l-.2-.2c-1.1-1.1-2.7-1.8-4.4-1.8"/><path d="M8 21a2 2 0 0 0 2-2"/><path d="M12 21v-4"/><path d="M14 21h-4"/><path d="M19 12a7 7 0 0 0-7-7H6a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h5"/><path d="M12 12c-1.7 0-3.3-.7-4.4-1.8l-.2-.2C6.7 8.9 6 7.3 6 5.6"/><path d="M12 12c1.7 0 3.3-.7 4.4-1.8l.2-.2c1.1-1.1 1.8-2.7 1.8-4.4"/><circle cx="19" cy="5" r="2"/><circle cx="19" cy="5" r="2"/><path d="M18.8 5.6a2.12 2.12 0 0 0-.2-3.3"/><path d="M19.6 7.4a2.12 2.12 0 0 0 3.3.2"/><path d="M16.4 7.4a2.12 2.12 0 0 0-.2 3.3"/><path d="M22.6 3.6a2.12 2.12 0 0 0-3.3-.2"/></svg>
+                    </span>
+                    পরিকল্পনা ও আত্মবিশ্বাস
+                </h3>
+                <p class="text-gray-600">
+                    সব তথ্য বাংলায় বুঝে নেওয়ার কারণে সিদ্ধান্ত নিতে আর ভয় লাগবে না। একের পর এক ধাপ
+                    প্ল্যান করে সামনে এগিয়ে যেতে পারবেন।
+                </p>
+            </div>
+
+            <!-- Outcome Card 4: সমাজে প্রতিনিধিত্ব (Icon: Users/Community) -->
+            <div class="group bg-white border-2 border-violet-200 rounded-2xl p-6 shadow-xl transition duration-300 hover-effect animated-outcome-card" style="animation-delay: 0.4s;">
+                <h3 class="font-extrabold text-text-dark mb-3 text-xl group-hover:text-blue-600 flex items-center gap-3">
+                    <span class="text-violet-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </span>
+                    সমাজে প্রতিনিধিত্ব
+                </h3>
+                <p class="text-gray-600">
+                    বাংলাভাষী উদ্যোক্তা হিসেবে নিজের পরিচয় তৈরি হবে। আপনার সাফল্যের গল্প অন্যদেরও পথ দেখাতে পারবে।
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Curriculum / What you will learn -->
+    <!-- Curriculum / What you will learn (New Animated Blue-Violet Theme) -->
+<section id="curriculum" class="py-16 sm:py-20 border-t border-violet-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header with Animation -->
+        <div class="mb-10 text-center animated-header-v2">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 mb-3">
+                আপনি কী শিখবেন
+            </h2>
+            <p class="text-base text-gray-700 max-w-3xl mx-auto">
+                কোর্সটি এমনভাবে সাজানো, যাতে একদম শুরু থেকে শুরু করেও ধীরে ধীরে প্রফেশনাল লেভেল পর্যন্ত যেতে পারেন।
+            </p>
+        </div>
+
+        <!-- Curriculum Box with Animated Border -->
+        <div class="curriculum-main-box border border-violet-300 rounded-3xl p-6 sm:p-8 text-base shadow-2xl shadow-violet-300/50">
+            <ul class="grid md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
+                <!-- Curriculum Item 1 -->
+                <li class="flex items-start gap-3 animated-curriculum-item" style="animation-delay: 0.1s;">
+                    <div class="flex-shrink-0 w-6 h-6 mt-1 rounded-full text-white flex items-center justify-center animated-bullet-pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                    </div>
+                    <p>
+                        <span class="font-extrabold text-text-dark">অ্যামাজন, ফ্লিপকার্ট এবং মীশোতে বিক্রেতা (Seller) হিসেবে একাউন্ট খোলা ও স্টোর সেটআপের সম্পূর্ণ প্রক্রিয়া।</span>
+                    </p>
+                </li>
+                <!-- Curriculum Item 2 -->
+                <li class="flex items-start gap-3 animated-curriculum-item" style="animation-delay: 0.2s;">
+                    <div class="flex-shrink-0 w-6 h-6 mt-1 rounded-full text-white flex items-center justify-center animated-bullet-pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                    </div>
+                    <p>
+                        <span class="font-extrabold text-text-dark">লাভজনক পণ্য নির্বাচন করার কৌশল এবং সঠিক সাপ্লায়ার বা উৎস খুঁজে বের করার রিসার্চ পদ্ধতি।</span>
+                    </p>
+                </li>
+                <!-- Curriculum Item 3 -->
+                <li class="flex items-start gap-3 animated-curriculum-item" style="animation-delay: 0.3s;">
+                    <div class="flex-shrink-0 w-6 h-6 mt-1 rounded-full text-white flex items-center justify-center animated-bullet-pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                    </div>
+                    <p>
+                        <span class="font-extrabold text-text-dark">পণ্যের তালিকা (Listing) তৈরি, প্রডাক্ট টাইটেল, বর্ণনা, কীওয়ার্ড ও SEO অপ্টিমাইজেশনের বাস্তব নির্দেশনা।</span>
+                    </p>
+                </li>
+                <!-- Curriculum Item 4 -->
+                <li class="flex items-start gap-3 animated-curriculum-item" style="animation-delay: 0.4s;">
+                    <div class="flex-shrink-0 w-6 h-6 mt-1 rounded-full text-white flex items-center justify-center animated-bullet-pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                    </div>
+                    <p>
+                        <span class="font-extrabold text-text-dark">আকর্ষণীয় প্রডাক্ট ইমেজ ব্যবহারের টিপস এবং গ্রাহকের মন জয় করার মত প্রডাক্ট পেজ তৈরির কৌশল।</span>
+                    </p>
+                </li>
+                <!-- Curriculum Item 5 -->
+                <li class="flex items-start gap-3 animated-curriculum-item" style="animation-delay: 0.5s;">
+                    <div class="flex-shrink-0 w-6 h-6 mt-1 rounded-full text-white flex items-center justify-center animated-bullet-pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                    </div>
+                    <p>
+                        <span class="font-extrabold text-text-dark">ই-কমার্স মার্কেটিং: প্ল্যাটফর্মের ভেতরে বিজ্ঞাপন (Ads), অফার, কুপন ও ডিসকাউন্ট কৌশল ব্যবহার করে বিক্রি বাড়ানো।</span>
+                    </p>
+                </li>
+                <!-- Curriculum Item 6 -->
+                <li class="flex items-start gap-3 animated-curriculum-item" style="animation-delay: 0.6s;">
+                    <div class="flex-shrink-0 w-6 h-6 mt-1 rounded-full text-white flex items-center justify-center animated-bullet-pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                    </div>
+                    <p>
+                        <span class="font-extrabold text-text-dark">অর্ডার-ডেলিভারি ব্যবস্থাপনা: প্যাকেজিং, কুরিয়ার/লজিস্টিক পরিচালনা, রিটার্ন ও কাস্টমার সাপোর্ট হ্যান্ডলিং।</span>
+                    </p>
+                </li>
+                <!-- Curriculum Item 7 -->
+                <li class="flex items-start gap-3 animated-curriculum-item" style="animation-delay: 0.7s;">
+                    <div class="flex-shrink-0 w-6 h-6 mt-1 rounded-full text-white flex items-center justify-center animated-bullet-pulse">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                    </div>
+                    <p>
+                        <span class="font-extrabold text-text-dark">আর্থিক পরিকল্পনা ও ব্যবসা স্কেল করার কৌশল: বাজেট, লাভ-ক্ষতির হিসাব, ক্যাশফ্লো বোঝা এবং ব্যবসা বড় করার রোডম্যাপ।</span>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<!-- Bonus Section (New Animated Blue-Violet Theme) -->
+<section id="bonuses" class="py-12 sm:py-16 bg-white border-t border-violet-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        
+        <!-- Section Header with Animation -->
+        <div class="mb-10 text-center animated-header-v2">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 mb-3">
+                এক্সক্লুসিভ বোনাসসমূহ
+            </h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                ওয়ার্কশপে অংশগ্রহণের মাধ্যমে ₹১১,০০০ মূল্যের এই বিশেষ সুবিধাগুলি সম্পূর্ণ বিনামূল্যে অর্জন করুন।
+            </p>
+        </div>
+
+        <!-- Bonus Cards Container -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            
+            <!-- Bonus Card #1: Product Searching Tools (Animated) -->
+            <div class="bg-gradient-to-br from-blue-500 to-violet-500 rounded-2xl p-6 shadow-2xl shadow-violet-500/40 transition duration-300 hover:scale-[1.03] animated-bonus-card" style="animation-delay: 0.1s;">
+                
+                <!-- Icon: Magnifying Glass/Search -->
+                <div class="w-12 h-12 mb-3 mx-auto rounded-full text-white flex items-center justify-center text-3xl animated-bullet-pulse">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </div>
+                
+                <p class="text-2xl font-bold text-white mb-2">
+                    বোনাস #১: প্রোডাক্ট সার্চিং টুলস অ্যাক্সেস
+                </p>
+                <p class="text-base text-white/90 mb-4">
+                    উচ্চ-লাভজনক এবং ট্রেন্ডিং পণ্যগুলি খুঁজে বের করার জন্য সেরা এবং পরীক্ষিত টুলগুলির অ্যাক্সেস ও তালিকা।
+                </p>
+                <p class="text-lg font-semibold text-white mt-auto">
+                    প্রকৃত মূল্য: <span class="text-red-300 line-through">₹১০,০০০/-</span>
+                </p>
+            </div>
+
+            <!-- Bonus Card #2: Photo Editing Resources (Animated) -->
+            <div class="bg-gradient-to-br from-blue-500 to-violet-500 rounded-2xl p-6 shadow-2xl shadow-violet-500/40 transition duration-300 hover:scale-[1.03] animated-bonus-card" style="animation-delay: 0.2s;">
+                
+                <!-- Icon: Edit/Crop -->
+                <div class="w-12 h-12 mb-3 mx-auto rounded-full text-white flex items-center justify-center text-3xl animated-bullet-pulse">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crop"><path d="M6.13 1L3 4.13"/><path d="M11 4h5a2 2 0 0 1 2 2v5"/><path d="M4 11V6a2 2 0 0 1 2-2h5"/><path d="M3 21h9a2 2 0 0 0 2-2v-9"/><path d="M18 18h-4.38"/><path d="M11 11h4.38"/></svg>
+                </div>
+                
+                <p class="text-2xl font-bold text-white mb-2">
+                    বোনাস #২: ছবি এডিটিং রিসোর্স
+                </p>
+                <p class="text-base text-white/90 mb-4">
+                    আপনার ই-কমার্স লিস্টিংয়ের জন্য দ্রুত ও পেশাদার মানের পণ্য ছবি তৈরির জন্য প্রয়োজনীয় সফটওয়্যার এবং রিসোর্স গাইডলাইন।
+                </p>
+                <p class="text-lg font-semibold text-white mt-auto">
+                    প্রকৃত মূল্য: <span class="text-red-300 line-through">₹১,০০০/-</span>
+                </p>
+            </div>
+            
+        </div>
+        
+        <!-- Total Value Summary (Animated Border Pulse) -->
+        <div class="mt-10 py-6 px-4 sm:px-8 bg-white rounded-xl max-w-3xl mx-auto border-4 border-transparent animated-value-box">
+            <p class="text-2xl font-semibold text-text-dark mb-2">
+                এই বোনাসগুলোর সম্মিলিত মোট মূল্য:
+            </p>
+            <p class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600">
+                ₹১১,০০০
+            </p>
+            <p class="text-lg font-bold mt-3 text-text-dark">
+                ওয়ার্কশপের সাথে এই সমস্ত সুবিধা বিনামূল্যে অন্তর্ভুক্ত।
+            </p>
+        </div>
+        
+    </div>
+</section>
+    
+
+
+
+    <!-- Testimonials Section (New Animated Blue-Violet Theme - 20 Cards) -->
+<section id="testimonials" class="py-16 sm:py-20 border-t border-violet-100 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header with Animation -->
+        <div class="mb-10 text-center animated-header-v2">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 mb-3 heading-line-fix">
+                শিক্ষার্থীদের অভিজ্ঞতা
+            </h2>
+            <p class="text-base text-gray-700 max-w-3xl mx-auto">
+                যারা কোর্সটি করেছেন, তাদের জীবনে কী বদল এসেছে, একটু শুনে নিন।
+            </p>
+        </div>
+
+        <!-- Auto Scrolling Wrapper -->
+        <div class="scrolling-wrapper overflow-hidden relative"> 
+            
+            <!-- Scrolling Content Block 1 (The original 10 cards) -->
+            <div class="scrolling-content flex"> 
+                
+                <!-- Card 1: মীনা সরকার -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.1s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">মীনা সরকার</p>
+                            <p class="text-xs text-gray-600">২৬, কলকাতা</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        “এই কোর্সের ধাপে ধাপে নির্দেশনা পেয়ে আমি আমার অ্যামাজন স্টোরে হ্যান্ডব্যাগ বিক্রি করে এখন মাসে প্রায়
+                        ৫০,০০০ টাকা আয় করছি। কোর্সটি খুবই সহায়ক ছিল এবং বাংলা ভাষায় হওয়ায় সবকিছু বুঝতে ঝামেলা হয়নি।”
+                    </p>
+                </div>
+                
+                <!-- Card 2: রোহিত দে -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">রোহিত দে</p>
+                            <p class="text-xs text-gray-600">৩০, সফটওয়্যার ইঞ্জিনিয়ার</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        “রাতের বেলা কোর্স দেখে পরের দিন ফ্লিপকার্টে মোবাইল কেসের দোকান খুলেছি। মাত্র তিন মাসে আমার আয়
+                        পৌঁছেছে মাসে ৭০,০০০ টাকায়। এত দ্রুত ফল পাব, ভাবতেও পারিনি।”
+                    </p>
+                </div>
+
+                <!-- Card 3: পরী খাতুন -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.3s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">পরী খাতুন</p>
+                            <p class="text-xs text-gray-600">২২, হোমমেকার</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        “আমি আগে কখনো ব্যবসা করিনি। মীশোতে জিনিস তালিকাভুক্তি এবং প্রমোশন কিভাবে করতে হয়,
+                        সবকিছু এই কোর্স থেকে শিখেছি। এখন নিজে পণ্য বিক্রি শুরু করার পর আত্মবিশ্বাস বেড়েছে এবং আয়ও আসতে শুরু করেছে।”
+                    </p>
+                </div>
+
+                <!-- Card 4: শ্রেয়া সাহা -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.4s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">শ্রেয়া সাহা</p>
+                            <p class="text-xs text-gray-600">২৯, ক্ষুদ্র ব্যবসায়ী</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "অ্যামাজন সেলার সেন্ট্রাল নিয়ে যত ভয় ছিল, সব কেটে গেছে। ক্লাসের পর আমার প্রথম মাসে ₹২২,০০০ বিক্রি হয়েছে। অসম্ভব খুশি!।”
+                    </p>
+                </div>
+
+                <!-- Card 5: অর্পণ হালদার -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.5s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">অর্পণ হালদার</p>
+                            <p class="text-xs text-gray-600">৩৮, এনজিও কর্মী</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "এই কোর্সের ফলে আমি আমার গ্রামের তাঁতশিল্পের পণ্যগুলো অ্যামাজনে বিক্রি করতে পারছি। স্থানীয় শিল্পের প্রচার হচ্ছে।”
+                    </p>
+                </div>
+
+                <!-- Card 6: তানভীর আহমেদ -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.6s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">তানভীর আহমেদ</p>
+                            <p class="text-xs text-gray-600">৩৬, ব্যবসায়ী</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "লজিস্টিকস ম্যানেজমেন্টের জটিলতাগুলো এত সহজে কেউ শেখাতে পারেনি। রিটার্ন সামলানো এখন অনেক সহজ।”
+                    </p>
+                </div>
+
+                <!-- Card 7: প্রিয়াঙ্কা রায় -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.7s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">প্রিয়াঙ্কা রায়</p>
+                            <p class="text-xs text-gray-600">২৮, বুটিক মালিক</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "ক্যাশফ্লো এবং ইনভেন্টরি ম্যানেজমেন্টের ক্লাসগুলো আমার ব্যবসার ভিত শক্ত করেছে। এখন আর লোকসানে চলতে হয় না।”
+                    </p>
+                </div>
+
+                <!-- Card 8: নমিতা বর্মন -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.8s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">নমিতা বর্মন</p>
+                            <p class="text-xs text-gray-600">৪১, শিক্ষক</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "এসইও অপটিমাইজেশন শেখার পর আমার পণ্যের ভিজিবিলিটি অনেক বেড়েছে। বাংলায় এত ভালো গাইডলাইন পাওয়া সত্যিই ভাগ্যের।”
+                    </p>
+                </div>
+                
+                <!-- Card 9: সুমন ভট্টাচার্য -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.9s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">সুমন ভট্টাচার্য</p>
+                            <p class="text-xs text-gray-600">২৯, বিপণন কর্মকর্তা</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "প্রোডাক্ট রিসার্চের কৌশলগুলি শেখার পর, আমি উচ্চ-লাভের মার্জিন সহ পণ্য নির্বাচন করতে শিখেছি। 
+                        ফলস্বরূপ, আমার দোকানের সামগ্রিক লাভ এখন ২০% এর বেশি।"
+                    </p>
+                </div>
+
+                <!-- Card 10: ফারজানা বেগম -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 1.0s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">ফারজানা বেগম</p>
+                            <p class="text-xs text-gray-600">২৫, উদ্যোক্তা</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "আমি আগে ফেসবুক অ্যাডস চালিয়ে শুধু টাকা নষ্ট করতাম। কোর্সের নির্দেশিকা মেনে চলার পর, 
+                        আমার বিজ্ঞাপনের ROAS (Return on Ad Spend) প্রায় ৩.৫-এ দাঁড়িয়েছে এবং বিক্রি দ্বিগুণ হয়েছে।"
+                    </p>
+                </div>
+                
+            </div>
+
+            <!-- Scrolling Content Block 2 (Duplicate 10 cards for smooth loop) -->
+            <div class="scrolling-content-duplicate scrolling-content flex" aria-hidden="true">
+                
+                <!-- Card 1: মীনা সরকার (Duplicate) -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.1s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">মীনা সরকার</p>
+                            <p class="text-xs text-gray-600">২৬, কলকাতা</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        “এই কোর্সের ধাপে ধাপে নির্দেশনা পেয়ে আমি আমার অ্যামাজন স্টোরে হ্যান্ডব্যাগ বিক্রি করে এখন মাসে প্রায়
+                        ৫০,০০০ টাকা আয় করছি। কোর্সটি খুবই সহায়ক ছিল এবং বাংলা ভাষায় হওয়ায় সবকিছু বুঝতে ঝামেলা হয়নি।”
+                    </p>
+                </div>
+                
+                <!-- Card 2: রোহিত দে (Duplicate) -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.2s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">রোহিত দে</p>
+                            <p class="text-xs text-gray-600">৩০, সফটওয়্যার ইঞ্জিনিয়ার</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        “রাতের বেলা কোর্স দেখে পরের দিন ফ্লিপকার্টে মোবাইল কেসের দোকান খুলেছি। মাত্র তিন মাসে আমার আয়
+                        পৌঁছেছে মাসে ৭০,০০০ টাকায়। এত দ্রুত ফল পাব, ভাবতেও পারিনি।”
+                    </p>
+                </div>
+
+                <!-- Card 3: পরী খাতুন (Duplicate) -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.3s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">পরী খাতুন</p>
+                            <p class="text-xs text-gray-600">২২, হোমমেকার</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        “আমি আগে কখনো ব্যবসা করিনি। মীশোতে জিনিস তালিকাভুক্তি এবং প্রমোশন কিভাবে করতে হয়,
+                        সবকিছু এই কোর্স থেকে শিখেছি। এখন নিজে পণ্য বিক্রি শুরু করার পর আত্মবিশ্বাস বেড়েছে এবং আয়ও আসতে শুরু করেছে।”
+                    </p>
+                </div>
+
+                <!-- Card 4: শ্রেয়া সাহা (Duplicate) -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.4s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">শ্রেয়া সাহা</p>
+                            <p class="text-xs text-gray-600">২৯, ক্ষুদ্র ব্যবসায়ী</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "অ্যামাজন সেলার সেন্ট্রাল নিয়ে যত ভয় ছিল, সব কেটে গেছে। ক্লাসের পর আমার প্রথম মাসে ₹২২,০০০ বিক্রি হয়েছে। অসম্ভব খুশি!।”
+                    </p>
+                </div>
+
+                <!-- Card 5: অর্পণ হালদার (Duplicate) -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.5s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">অর্পণ হালদার</p>
+                            <p class="text-xs text-gray-600">৩৮, এনজিও কর্মী</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "এই কোর্সের ফলে আমি আমার গ্রামের তাঁতশিল্পের পণ্যগুলো অ্যামাজনে বিক্রি করতে পারছি। স্থানীয় শিল্পের প্রচার হচ্ছে।”
+                    </p>
+                </div>
+
+                <!-- Card 6: তানভীর আহমেদ (Duplicate) -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.6s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">তানভীর আহমেদ</p>
+                            <p class="text-xs text-gray-600">৩৬, ব্যবসায়ী</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "লজিস্টিকস ম্যানেজমেন্টের জটিলতাগুলো এত সহজে কেউ শেখাতে পারেনি। রিটার্ন সামলানো এখন অনেক সহজ।”
+                    </p>
+                </div>
+
+                <!-- Card 7: প্রিয়াঙ্কা রায় (Duplicate) -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.7s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">প্রিয়াঙ্কা রায়</p>
+                            <p class="text-xs text-gray-600">২৮, বুটিক মালিক</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "ক্যাশফ্লো এবং ইনভেন্টরি ম্যানেজমেন্টের ক্লাসগুলো আমার ব্যবসার ভিত শক্ত করেছে। এখন আর লোকসানে চলতে হয় না।”
+                    </p>
+                </div>
+
+                <!-- Card 8: নমিতা বর্মন (Duplicate) -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.8s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">নমিতা বর্মন</p>
+                            <p class="text-xs text-gray-600">৪১, শিক্ষক</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "এসইও অপটিমাইজেশন শেখার পর আমার পণ্যের ভিজিবিলিটি অনেক বেড়েছে। বাংলায় এত ভালো গাইডলাইন পাওয়া সত্যিই ভাগ্যের।”
+                    </p>
+                </div>
+                
+                <!-- Card 9: সুমন ভট্টাচার্য (Duplicate) -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 0.9s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">সুমন ভট্টাচার্য</p>
+                            <p class="text-xs text-gray-600">২৯, বিপণন কর্মকর্তা</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "প্রোডাক্ট রিসার্চের কৌশলগুলি শেখার পর, আমি উচ্চ-লাভের মার্জিন সহ পণ্য নির্বাচন করতে শিখেছি। 
+                        ফলস্বরূপ, আমার দোকানের সামগ্রিক লাভ এখন ২০% এর বেশি।"
+                    </p>
+                </div>
+
+                <!-- Card 10: ফারজানা বেগম (Duplicate) -->
+                <div class="testimonial-card bg-white border-2 border-violet-100 rounded-2xl flex flex-col shadow-xl shadow-violet-100/50 transition duration-300 hover-effect testimonial-card-pulse" style="animation-delay: 1.0s;">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full text-white flex items-center justify-center text-lg font-bold mr-3 testimonial-icon-gradient">👤</div>
+                        <div>
+                            <p class="font-semibold text-text-dark">ফারজানা বেগম</p>
+                            <p class="text-xs text-gray-600">২৫, উদ্যোক্তা</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 leading-relaxed italic">
+                        "আমি আগে ফেসবুক অ্যাডস চালিয়ে শুধু টাকা নষ্ট করতাম। কোর্সের নির্দেশিকা মেনে চলার পর, 
+                        আমার বিজ্ঞাপনের ROAS (Return on Ad Spend) প্রায় ৩.৫-এ দাঁড়িয়েছে এবং বিক্রি দ্বিগুণ হয়েছে।"
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+    <!-- Final CTA / Enroll (New Animated Blue-Violet Theme) -->
+<section id="enroll" class="py-16 sm:py-20 border-t border-violet-100 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Main Enroll Box with Animated Border -->
+        <div class="enroll-box-animated border-2 border-transparent rounded-3xl p-8 sm:p-10 text-center shadow-2xl shadow-violet-300/40 relative overflow-hidden">
+            
+            <!-- Heading -->
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-violet-600 mb-4 relative z-10">
+                Free webinar এ Join করতে এখনই রেজিস্টার করুন
+            </h2>
+            
+            <!-- Subheading -->
+            <p class="text-base text-gray-700 max-w-2xl mx-auto mb-7 relative z-10">
+                নিজস্ব ই-কমার্স যাত্রা শুরু করার জন্য আর দেরি করার কোনো কারণ নেই।
+                বাংলায় বুঝে শিখে নিজেকে প্রতিযোগিতায় এগিয়ে তুলুন। আজই কোর্সে নাম লিখিয়ে
+                আপনার জায়গা নিশ্চিত করুন এবং নিজের স্বপ্নপূরণে এক ধাপ এগিয়ে যান।
+            </p>
+
+            <!-- Timer Display (Uses custom gradient background for better visibility) -->
+            <p id="offer-timer" class="text-3xl font-extrabold text-white mb-6 relative z-10 bg-red-600 px-4 py-2 rounded-xl mx-auto inline-block animated-timer-pulse">
+                অফার শেষ হচ্ছে: 00:00
+            </p>
+
+            <!-- CTA Button with Wave Animation -->
+            <div class="wave-wrapper inline-block relative z-10">
+                <a href="https://wa.me/9432149255?text=আমি%20আপনার%20Webinar%20Join%20করতে%20আগ্রহী।" 
+                    target="_blank"
+                    class="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-violet-600 text-lg font-bold text-white shadow-2xl shadow-violet-500/50 transition transform hover:scale-[1.05] duration-300 relative animated-cta-button-v2">
+                    তাড়াতাড়ি রেজিস্টার করুন (WhatsApp)
+                </a>
+            </div>
+
+            <!-- Disclaimer -->
+            <p class="text-xs text-gray-500 mt-3 relative z-10">
+                *কোর্সে ভর্তির জন্য উপরের বোতামে ক্লিক করলে আপনাকে পেমেন্ট/রেজিস্ট্রেশন পেজে নিয়ে যাওয়া হবে।
+            </p>
+            
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-200 bg-secondary py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-text-muted">
+            <p>© <span id="year"></span> বাংলায় ই-কমার্স কোর্স. সর্বস্বত্ব সংরক্ষিত।</p>
+            <p class="text-xs">অ্যামাজন, ফ্লিপকার্ট ও মীশো তাদের নিজ নিজ ট্রেডমার্ক ও ব্র্যান্ডের অন্তর্ভুক্ত।</p>
+        </div>
+    </footer>
+
+<!-- Fixed CTA Banner (Sticky Footer with Timer) -->
+<!-- FIX: 'cta-hidden' ক্লাসটি যোগ করা হয়েছে যা জাভাস্ক্রিপ্ট ৩ সেকেন্ড পর সরিয়ে দেবে -->
+<div id="fixedCtaBanner" class="fixed bottom-0 left-0 right-0 z-[9998] p-3 sm:p-4 bg-gradient-to-r from-blue-600 to-violet-600 text-white shadow-2xl pulse-animation cta-hidden">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-2 w-full">
+        
+        <!-- Timer Display and CTA Text -->
+        <div class="flex flex-col sm:flex-row items-center gap-3">
+            <p class="text-lg sm:text-xl font-bold flex-shrink-0">
+                অফার শেষ হচ্ছে: <span id="fixed-timer-display" class="bg-red-600 px-2 py-0.5 rounded-md">00:00</span>
+            </p>
+            
+            <p class="text-base font-medium hidden sm:block"> Free webinar এ Join করতে এখনই রেজিস্টার করুন</p>
+        </div>
+        
+        <!-- CTA Button -->
+        <a href="#enroll" class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 text-sm font-bold text-white shadow-lg transition transform hover:scale-[1.05] duration-300 flex-shrink-0">
+            রেজিস্টার করুন
+        </a>
+    </div>
+</div>
+
+
+
+    <!-- External JavaScript File Link -->
+    <script src="script.js"></script>
+
+<div id="socialProofContainer" class="fixed bottom-24 right-0 z-[9999] space-y-3 pointer-events-none sm:bottom-[80px]">    </div>
+</body>
+</html>
